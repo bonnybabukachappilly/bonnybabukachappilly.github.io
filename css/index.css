@@ -27,14 +27,18 @@ body {
 }
 
 .logo {
-    font-size: 25px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-    cursor: default;
     opacity: 0;
     animation: slideRight 1s ease forwards;
 }
+
+.logo img {
+    max-width: 120px;
+    max-height: 120px;
+    background: rgb(33, 165, 175);
+    border-radius: 50%;
+    border: 2px solid rgb(33, 165, 175);
+}
+
 
 .navbar a {
     display: inline-block;
