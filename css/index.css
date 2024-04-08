@@ -64,7 +64,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 70px 10% 0;;
+    padding: 70px 10% 0;
+    ;
 }
 
 
@@ -221,12 +222,34 @@ body {
     0% {
         transform: translateY(0);
     }
-    
+
     50% {
         transform: translateY(-24px);
     }
 
     100% {
         transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .logo {
+        display: none;
+    }
+
+    .header {
+        display: none;
+    }
+
+    .home-content h3 {
+        font-size: 22px;
+    }
+
+    .home-content h1 {
+        font-size: 36px;
+    }
+
+    .home-img img {
+        display: none;
     }
 }
