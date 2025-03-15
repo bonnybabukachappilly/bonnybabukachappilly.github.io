@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+:root {
+    --background-color: #EAE0E0;
+    --button-highlight: #DDCDCD;
+    --dark-font: #3D2A2A;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+}
+
+.navbar {
+    background-color: var(--background-color) !important;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-nav .nav-item {
+    margin: 0 50px;
+}
+
+.navbar-nav .nav-link {
+    transition: color 0.3s ease-in-out;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: var(--dark-font);
+    position: relative;
+}
+
+.navbar-nav .nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: var(--dark-font);
+    transition: all .5s;
+}
+
+.navbar-nav .nav-link:hover::before {
+    width: 100%;
+}
+
+.btn-cv {
+    background-color: var(--button-highlight);
+    border-radius: 50px;
+    border: none;
+    color: var(--dark-font);
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-cv:hover {
+    background-color: var(--dark-font);
+    color: var(--button-highlight);
+}
+
+.btn-cv .btn-icon {
+    vertical-align: middle;
+}
+
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.home-content {
+    display: flex;
+    align-items: center;
+    gap: 200px;
+}
+
+.home-text {
+    max-width: 500px;
+}
+
+.home-text h1 {
+    font-size: 2.5rem;
+    color: var(--dark-font);
+    margin-bottom: 10px;
+    padding-bottom: 50px;
+}
+
+.home-text p {
+    font-size: 1.2rem;
+    color: var(--dark-font);
+    margin-bottom: 20px;
+    padding-bottom: 50px;
+}
+
+.social-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.social-buttons .btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    background-color: var(--button-highlight);
+    color: var(--dark-font);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 50px;
+}
+
+.social-buttons .btn:hover {
+    background-color: var(--dark-font);
+    color: var(--button-highlight);
+}
+
+.home-image img {
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--dark-font);
+}
