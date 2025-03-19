@@ -1,0 +1,115 @@
+/* General styling for the project section */
+.projects {
+    padding: 50px 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Styling for the container holding the project cards */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Each project card */
+.project-card {
+    background-color: var(--bg-color);
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    height: auto;
+    /* Allow dynamic height adjustment */
+}
+
+.project-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.project-description {
+    font-size: 1.1rem;
+    color: #666;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.project-details {
+    font-size: 1rem;
+    color: #555;
+    text-align: left;
+}
+
+.project-details h4 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.project-details ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding: 0;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive layout for larger screens */
+@media (min-width: 992px) {
+    .col-lg-6 {
+        width: 50% !important;
+        /* Each card takes 50% width of the row */
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .project-card {
+        width: 100%;
+        margin-right: 20px;
+        margin: 10px;
+        /* Take up full width on tablets and smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .projects {
+        padding: 30px 0;
+        /* Reduce padding on mobile */
+    }
+
+    .section-title {
+        font-size: 2rem;
+        /* Smaller title on mobile */
+    }
+
+    .project-title {
+        font-size: 1.5rem;
+        /* Adjust project title font size */
+    }
+
+    .project-description {
+        font-size: 1rem;
+        /* Adjust project description font size */
+    }
+
+    .project-details h4 {
+        font-size: 1.1rem;
+        /* Adjust subheading font size */
+    }
+}

@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+/* Variables */
+:root {
+    --bg-color: #EAE0E0;
+    --highlight-color: #DDCDCD;
+    --font-color-dark: #3D2A2A;
+    --font-color-special: #6b4848;
+}
+
+/* General Styling */
+body {
+    font-family: 'Roboto Mono', monospace;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--bg-color) !important;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-nav .nav-item {
+    margin: 0 20px;
+}
+
+.navbar-nav .nav-link {
+    transition: color 0.3s ease-in-out;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: var(--font-color-dark);
+    position: relative;
+}
+
+.navbar-nav .nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--font-color-dark);
+    transition: width 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover::before {
+    width: 100%;
+}
+
+.navbar-nav .nav-link.active {
+    color: #000;
+    font-weight: bold;
+}
+
+/* Download CV Button */
+.download-cv {
+    background: var(--highlight-color);
+    border-radius: 50px;
+    border: none;
+    color: var(--font-color-dark);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.download-cv i {
+    transition: transform 0.3s ease-in-out;
+}
+
+.download-cv:hover {
+    background: var(--font-color-dark);
+    color: var(--highlight-color);
+}
+
+.download-cv:hover i {
+    transform: translateY(3px);
+}
+
+/* Home Section */
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 20px;
+}
+
+.home h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--font-color-dark);
+}
+
+.home p {
+    font-size: 1.2rem;
+    color: var(--font-color-dark);
+    max-width: 800px;
+    line-height: 1.6;
+}
+
+/* Social Buttons */
+.btn-outline-dark {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.btn-outline-dark:hover {
+    background-color: var(--font-color-dark) !important;
+    color: var(--highlight-color) !important;
+}
+
+/* Profile Image */
+.home img {
+    max-width: 400px;
+    height: auto;
+    border-radius: 50%;
+    border: 5px solid var(--font-color-dark);
+}
+
+/* Fix Navbar Overlap */
+.about,
+.experience,
+.contact {
+    padding-top: 80px;
+}
+
+/* About & Experience Cards */
+.about-card,
+.experience-card {
+    background-color: var(--bg-color);
+    border-radius: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.section-title {
+    color: var(--font-color-dark);
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Subheadings */
+.subheading {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--font-color-dark);
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Skills Pills */
+.skill-pill {
+    background-color: var(--highlight-color);
+    color: var(--font-color-dark);
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 50px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    text-align: center;
+    transition: all .3s;
+}
+
+.skill-pill:hover {
+    background-color: var(--bg-color);
+    border: 1px solid var(--font-color-dark);
+    transform: scale(1.05);
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3);
+}
