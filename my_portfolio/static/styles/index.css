@@ -6,6 +6,7 @@
     --bg-color: #EAE0E0;
     --highlight-color: #DDCDCD;
     --font-color-dark: #3D2A2A;
+    --font-color-special: #6b4848;
 }
 
 /* General Styling */
@@ -47,6 +48,11 @@ body {
 
 .navbar-nav .nav-link:hover::before {
     width: 100%;
+}
+
+.navbar-nav .nav-link.active {
+    color: #000;
+    font-weight: bold;
 }
 
 /* Download CV Button */
@@ -138,7 +144,6 @@ body {
 .about-card,
 .experience-card {
     background-color: var(--bg-color);
-    border: 2px solid var(--font-color-dark);
     border-radius: 20px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -148,75 +153,20 @@ body {
     width: 100%;
 }
 
-.experience-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    max-width: 90%;
-    margin: 0 auto;
+.section-title {
+    color: var(--font-color-dark);
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
 }
 
-/* Hover Effect for Desktop */
-@media (min-width: 769px) {
-    .experience-container:hover .experience-card:not(:hover) {
-        transform: scale(0.95);
-        opacity: 0.7;
-    }
-
-    .experience-card:hover {
-        transform: scale(1.02);
-        opacity: 1;
-        z-index: 10;
-        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    }
-
-    .experience-card:hover .experience-details {
-        opacity: 1;
-        max-height: 500px;
-    }
-}
-
-/* Experience Details */
-.experience-details {
-    opacity: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: opacity 0.4s ease-in-out, max-height 0.4s ease-in-out;
-}
-
-/* Expanded Card for Mobile */
-@media (max-width: 768px) {
-    .experience-card.active .experience-details {
-        opacity: 1;
-        max-height: 500px;
-    }
-}
-
-/* Experience Title */
-.experience-title {
+/* Subheadings */
+.subheading {
     font-size: 1.5rem;
     font-weight: bold;
     color: var(--font-color-dark);
     text-align: center;
-    margin-bottom: 5px;
-}
-
-/* Experience Duration */
-.experience-duration {
-    font-size: 1rem;
-    font-weight: normal;
-    color: var(--font-color-dark);
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-/* Skills Section */
-.skills-heading {
-    color: var(--font-color-dark);
-    font-size: 1.8rem;
-    font-weight: bold;
-    text-align: center;
+    margin-top: 20px;
 }
 
 /* Skills Pills */
@@ -229,7 +179,6 @@ body {
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
     display: inline-block;
     text-align: center;
-    max-width: 80%;
     transition: all .3s;
 }
 
@@ -238,32 +187,4 @@ body {
     border: 1px solid var(--font-color-dark);
     transform: scale(1.05);
     box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3);
-}
-
-/* Responsive Design */
-@media (max-width: 991px) {
-    .experience-card {
-        max-width: 95vw;
-    }
-}
-
-@media (max-width: 768px) {
-    .experience-card {
-        max-width: 100%;
-    }
-
-    .home h1 {
-        font-size: 2rem;
-    }
-
-    .home p {
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 1024px) {
-    .experience-card.active .experience-details {
-        opacity: 1;
-        max-height: 500px;
-    }
 }

@@ -1,0 +1,33 @@
+<section id="about" class="about container-fluid d-flex align-items-center min-vh-100 min-vh-md-auto">
+    <div class="container">
+        <div class="row align-items-center">
+
+            <div class="col-lg-4">
+                <h2 class="skills-heading fw-bold text-center mb-4">Skills</h2>
+                <div class="row justify-content-center mt-4">
+                    {% for data in config.skills %}
+                    <div class="col-12">
+                        <h4 class="subheading">{{data.name}}</h4>
+                        <div class="d-flex flex-wrap justify-content-center gap-2">
+                            {% for items in data.keywords %}
+                            <span class="skill-pill">{{items}}</span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="col-lg-8 mb-4">
+                <div class="card about-card">
+                    <div class="card-body">
+                        <p class="lead text-muted">
+                            {{config.summary}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

@@ -36,12 +36,14 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    navLinks.forEach((link) => {
-        link.addEventListener("click", function () {
-            if (window.innerWidth <= 1024) {
-                navbarToggler.classList.add("collapsed");
-                navbarCollapse.classList.remove("show");
-            }
+    if (navbarToggler && navbarCollapse) {
+        navLinks.forEach((link) => {
+            link.addEventListener("click", function () {
+                if (window.innerWidth <= 1024) {
+                    navbarToggler.classList.add("collapsed");
+                    navbarCollapse.classList.remove("show");
+                }
+            });
         });
-    });
+    }
 });

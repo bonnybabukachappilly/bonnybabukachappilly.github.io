@@ -1,0 +1,37 @@
+<section id="experience" class="experience container-fluid d-flex align-items-center min-vh-100 min-vh-md-auto">
+    <div class="container">
+        <h2 class="text-center mb-4">Experience</h2>
+        <div class="experience-container row justify-content-center">
+            <!-- Experience Card 1 -->
+            {% for data in config.work_experience%}
+            <div class="col-lg-10 col-md-10">
+                <div class="experience-card p-4">
+                    <h4 class="experience-title">{{data.position}} <br> {{data.company}}</h4>
+                    <p class="experience-duration">{{data.start_date}} - {{data.end_date}} | {{data.location}}</p>
+                    <div class="experience-details">
+                        <ul>
+                            {% for items in data.highlights %}
+                            <li>{{items}}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            <!-- <div class="col-lg-10 col-md-10">
+                <div class="experience-card p-4">
+                    <h4 class="experience-title">Robotics Engineer - Simelabs</h4>
+                    <p class="experience-duration">Jan 2022 - Present</p>
+                    <div class="experience-details">
+                        <ul>
+                            <li>Worked on SmartDose Flex Automation project.</li>
+                            <li>Developed robotic manipulator applications.</li>
+                            <li>Integrated real-time control systems with ROS2.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div> -->
+
+        </div>
+    </div>
+</section>

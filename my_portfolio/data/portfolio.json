@@ -1,0 +1,130 @@
+{
+    "name": "BONNY BABU",
+    "title": "Robotics Engineer",
+    "favicon": "assets/images/BB.png",
+    "favicon_type": "png",
+    "image_path": "/assets/images/profile_pic.png",
+    "contact": {
+        "email": "bonnybabukachappilly@gmail.com",
+        "phone": "+91 8589973392",
+        "location": {
+            "current": "Bangalore, Karnataka, India",
+            "home": "Ernakulam, Kerala, India"
+        }
+    },
+    "summary": "I am a Robotics Engineer with expertise in ROS 2, simulation, and motion planning. My experience includes industrial automation, control systems, and real-time data integration. Additionally, I have a strong background in PLC programming, embedded systems, and electrical engineering. Passionate about innovation and problem-solving, I thrive in cross-disciplinary teams and am always eager to learn and explore new technologies.",
+    "portfolio": "I am a Robotics Engineer specializing in ROS 2, simulation, and motion planning, with expertise in industrial automation, control systems, and real-time data integration.",
+    "social": [
+        {
+            "label": "Gmail",
+            "icon": "envelope-at",
+            "url": ""
+        },
+        {
+            "label": "Linkedin",
+            "icon": "linkedin",
+            "url": "https://www.linkedin.com/in/bonnybabukachappilly"
+        },
+        {
+            "label": "Github",
+            "icon": "github",
+            "url": "https://www.github.com/bonnybabukachappilly"
+        }
+    ],
+    "work_experience": [
+        {
+            "company": "Simelabs - Digital, AI, Metaverse, Robotics, VLSI",
+            "position": "Robotics Engineer",
+            "start_date": "May 2021",
+            "end_date": "Present",
+            "location": "Ernakulam, Kerala, India",
+            "highlights": [
+                "Automated SmartDose assembly line for West Pharma using advanced robotics digital twins, and real-time monitoring.",
+                "Developed an AMR project (Sime-World) with ROS 2 and a Django backend for real-time navigation and visualization.",
+                "Contributed to the development of VitalCAM, reducing latency by 40% for real-time patient data streaming.",
+                "Built an automated testing solution for Isave, integrating an intuitive GUI and comprehensive reporting protocols."
+            ]
+        },
+        {
+            "company": "Path BEE Engineers and Contractors",
+            "position": "MEP Design Engineer (Electrical)",
+            "start_date": "January 2020",
+            "end_date": "April 2021",
+            "location": "Ernakulam, Kerala, India",
+            "highlights": [
+                "Designed and maintained electrical single-line diagrams (SLDs) and layouts using AutoCAD software.",
+                "Conducted site supervision ensuring design implementation and compliance with safety regulations.",
+                "Managed procurement activities and supervised daily operations for government projects."
+            ]
+        }
+    ],
+    "education": [
+        {
+            "course": "Bachelor of Technology in Electrical and Electronics Engineering",
+            "institution": "College of Engineering, Aranmula",
+            "year": "2020",
+            "university": "APJ Abdul Kalam Technological University"
+        },
+        {
+            "course": "Diploma of Education in MEP",
+            "institution": "MTTC International LLC",
+            "year": "2019",
+            "university": "STED Council"
+        }
+    ],
+    "projects": [
+        {
+            "name": "SmartDose Flex Automation",
+            "client": "West Pharma",
+            "duration": "January 2023 - Present",
+            "description": "Automated the SmartDose assembly line using robotics, digital twin technologies, and real-time monitoring.",
+            "tasks": [
+                "Simulated workflows with RoboDK, achieving a 75% cycle time reduction.",
+                "Programmed ABB Yumi, ABB Gofa, and Omron TM5 robots for dynamic error handling.",
+                "Designed HMI and PLC systems to synchronize 6 assembly cells for smooth operation.",
+                "Integrated sensors and actuators to minimize Failure Modes and Effects Analysis (FMEA) findings.",
+                "Streamlined data communication using MQTT, Modbus, and TCP sockets."
+            ]
+        },
+        {
+            "name": "Sime-World",
+            "client": "In-House Project",
+            "duration": "July 2022 - December 2022",
+            "description": "Developed an Autonomous Mobile Robot (AMR) using TurtleBot 3 and ROS 2.",
+            "tasks": [
+                "Built a real-time communication system with WebSockets for robot-to-frontend connectivity.",
+                "Developed middleware for ROS 2 message conversion and API interaction.",
+                "Integrated navigation stacks with sensor fusion for accurate obstacle avoidance."
+            ]
+        }
+    ],
+    "skills": [
+        {
+            "name": "Robotics & Automation",
+            "level": "Expert",
+            "keywords": [
+                "ROS 2",
+                "Python",
+                "Control Systems",
+                "Automation"
+            ]
+        },
+        {
+            "name": "Simulation & Design",
+            "level": "Advanced",
+            "keywords": [
+                "Gazebo",
+                "SolidWorks"
+            ]
+        },
+        {
+            "name": "Embedded Systems & Hardware",
+            "level": "Intermediate",
+            "keywords": [
+                "Raspberry Pi 4",
+                "Raspberry Pi Pico 2W",
+                "MG996R Servos"
+            ]
+        }
+    ]
+}

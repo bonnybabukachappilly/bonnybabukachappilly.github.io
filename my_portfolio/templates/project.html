@@ -1,0 +1,23 @@
+<section id="project" class="projects container-fluid d-flex flex-column align-items-center py-5">
+    <h2 class="section-title">Projects</h2>
+    <div class="projects-container row">
+        <!-- Project 1 Card -->
+        {% for data in config.projects %}
+        <div class="col-lg-6 col-md-12 mb-4">
+            <div class="project-card">
+                <h3 class="project-title">{{data.name}}</h3>
+                <p class="project-description">Client: {{data.client}} | {{data.duration}}</p>
+                <p class="project-description">{{data.description}}</p>
+                <div class="project-details">
+                    <h4>Details:</h4>
+                    <ul>
+                        {% for items in data.tasks %}
+                        <li>{{items}}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>

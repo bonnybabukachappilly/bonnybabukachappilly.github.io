@@ -1,0 +1,15 @@
+<section id="education" class="education container-fluid d-flex align-items-center min-vh-100 min-vh-md-auto">
+    <div class="container">
+        <h2 class="section-title">Education</h2>
+        <div class="education-cards">
+            {% for data in config.education %}
+            <div class="education-card">
+                <h3 class="degree-title">{{data.course}}</h3>
+                <p class="institution-name">{{data.institution}} - {{data.year}}</p>
+                <p class="education-university">{{data.university}}</p>
+            </div>
+            {% endfor %}
+            
+        </div>
+    </div>
+</section>
