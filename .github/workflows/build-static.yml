@@ -1,0 +1,41 @@
+name: Generate Static HTML
+
+on:
+  push:
+    branches:
+      - main  # Runs when changes are pushed to the main branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4.2.2  # Updated to the latest version
+
+      - name: Set up UV and Python
+        run: |
+          curl -fsSL https://astral.sh/uv/install.sh | sh
+          uv venv .venv
+          source .venv/bin/activate
+
+      - name: Install dependencies using UV
+        run: |
+          cd my_portfolio
+          uv pip install -r requirements.txt
+
+      - name: Run Flask app and generate static index.html
+        run: |
+          cd my_portfolio
+          export FLASK_APP=app.py
+          flask run &  # Start Flask server in the background
+          sleep 5  # Wait for Flask to fully start
+          curl http://127.0.0.1:5000 -o ../index.html  # Save the main page as index.html
+
+      - name: Commit and push generated index.html
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add index.html
+          git commit -m "Update static index.html [Automated]" || echo "No changes to commit"
+          git push origin main
