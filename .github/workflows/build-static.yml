@@ -33,7 +33,7 @@ jobs:
           flask run --host=127.0.0.1 --port=5000 &
           sleep 5
           curl http://127.0.0.1:5000 -o ../index.html
-          cp -r static ../static
+          cp -r static ../
 
       - name: Commit and push static files and index.html
         env:
