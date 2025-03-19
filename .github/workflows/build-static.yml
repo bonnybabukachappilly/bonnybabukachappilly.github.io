@@ -3,7 +3,7 @@ name: Generate Static HTML
 on:
   push:
     branches:
-      - master  # Runs when changes are pushed to the master branch
+      - master
 
 jobs:
   build:
@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4.2.2  # Updated to the latest version
+        uses: actions/checkout@v4.2.2
 
       - name: Set up UV
         run: |
@@ -30,22 +30,18 @@ jobs:
           source .venv/bin/activate
           export FLASK_APP=app.py
           export FLASK_ENV=production
-          flask run --host=127.0.0.1 --port=5000 &  # Start Flask in the background
-          sleep 5  # Allow Flask to start
-          curl http://127.0.0.1:5000 -o ../index.html  # Save rendered HTML
+          flask run --host=127.0.0.1 --port=5000 &
+          sleep 5
+          curl http://127.0.0.1:5000 -o ../index.html
+          cp -r static ../static
 
-      - name: Move static files to root
-        run: |
-          mkdir -p ../static
-          cp -r my_portfolio/static/* ../static/  # Copy all static files to root
-
-      - name: Commit and push generated index.html
+      - name: Commit and push static files and index.html
         env:
-          GH_PAT: ${{ secrets.GH_PAT }}  # Use the stored secret
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
-          git remote set-url origin https://x-access-token:${GH_PAT}@github.com/bonnybabukachappilly/bonnybabukachappilly.github.io.git
-          git add .
-          git commit -m "Update static index.html [Automated]" || echo "No changes to commit"
-          git push origin master || echo "No changes to push"
+          git add index.html
+          if [ -d "static" ]; then git add static/; fi
+          git commit -m "Update static site files [Automated]" || echo "No changes to commit"
+          git push https://x-access-token:${GITHUB_TOKEN}@github.com/bonnybabukachappilly/bonnybabukachappilly.github.io.git master || echo "No changes to push"
