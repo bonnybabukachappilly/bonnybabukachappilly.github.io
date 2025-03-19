@@ -11,36 +11,38 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4.2.2  # Updated to the latest version
+        uses: actions/checkout@v4.2.2
 
       - name: Set up UV
         run: |
           curl -fsSL https://astral.sh/uv/install.sh | sh
-          uv venv my_portfolio/.venv
-          source my_portfolio/.venv/bin/activate
+          uv venv .venv
+          source .venv/bin/activate
 
       - name: Install dependencies using UV
         run: |
           cd my_portfolio
           uv sync
 
-      - name: Run Flask app and generate static index.html
+      - name: Run Flask app and generate static files
         run: |
           cd my_portfolio
-          source .venv/bin/activate
           export FLASK_APP=app.py
-          export FLASK_ENV=production
-          flask run --host=127.0.0.1 --port=5000 &  # Start Flask in the background
-          sleep 5  # Allow Flask to start
-          curl http://127.0.0.1:5000 -o ../index.html  # Save rendered HTML
+          flask run &  # Start Flask server in the background
+          sleep 5  # Wait for Flask to fully start
+          curl http://127.0.0.1:5000 -o ../index.html  # Save the main page as index.html
 
-      - name: Commit and push generated index.html
+      - name: Move static files to root
+        run: |
+          mkdir -p ../static
+          cp -r my_portfolio/static/* ../static/  # Copy all static files to root
+
+      - name: Commit and push static files and index.html
         env:
-          GH_PAT: ${{ secrets.GH_PAT }}  # Use the stored secret
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
-          git remote set-url origin https://x-access-token:${GH_PAT}@github.com/bonnybabukachappilly/bonnybabukachappilly.github.io.git
-          git add index.html
-          git commit -m "Update static index.html [Automated]" || echo "No changes to commit"
-          git push origin master || echo "No changes to push"
+          git add index.html static/
+          git commit -m "Update static site files [Automated]" || echo "No changes to commit"
+          git push https://x-access-token:${GITHUB_TOKEN}@github.com/bonnybabukachappilly/bonnybabukachappilly.github.io.git master || echo "No changes to push"
