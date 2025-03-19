@@ -16,22 +16,23 @@ jobs:
       - name: Set up UV
         run: |
           curl -fsSL https://astral.sh/uv/install.sh | sh
-          uv venv .venv
-          source .venv/bin/activate
+          uv venv my_portfolio/.venv
+          source my_portfolio/.venv/bin/activate
 
       - name: Install dependencies using UV
         run: |
           cd my_portfolio
           uv sync
 
-
       - name: Run Flask app and generate static index.html
         run: |
           cd my_portfolio
+          source .venv/bin/activate
           export FLASK_APP=app.py
-          flask run &  # Start Flask server in the background
-          sleep 5  # Wait for Flask to fully start
-          curl http://127.0.0.1:5000 -o ../index.html  # Save the main page as index.html
+          export FLASK_ENV=production
+          flask run --host=127.0.0.1 --port=5000 &  # Start Flask in the background
+          sleep 5  # Allow Flask to start
+          curl http://127.0.0.1:5000 -o ../index.html  # Save rendered HTML
 
       - name: Commit and push generated index.html
         run: |
@@ -39,4 +40,4 @@ jobs:
           git config --global user.email "github-actions@github.com"
           git add index.html
           git commit -m "Update static index.html [Automated]" || echo "No changes to commit"
-          git push origin master
+          git push origin master || echo "No changes to push"
