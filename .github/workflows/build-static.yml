@@ -22,7 +22,7 @@ jobs:
       - name: Install dependencies using UV
         run: |
           cd my_portfolio
-          uv pip install
+          uv install
 
 
       - name: Run Flask app and generate static index.html
