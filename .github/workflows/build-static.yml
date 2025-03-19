@@ -22,11 +22,8 @@ jobs:
       - name: Install dependencies using UV
         run: |
           cd my_portfolio
-          if [ -f "uv.lock" ]; then
-            uv pip install -r uv.lock
-          else
-            uv pip install
-          fi
+          uv pip install
+
 
       - name: Run Flask app and generate static index.html
         run: |
