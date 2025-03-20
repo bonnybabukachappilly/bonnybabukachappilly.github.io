@@ -44,7 +44,7 @@ jobs:
         run: |
           cd my_portfolio
           curl http://127.0.0.1:5000/resume -o resume.html
-          wkhtmltopdf --page-size A4 --disable-smart-shrinking --no-stop-slow-scripts resume.html ../resume.pdf
+          wkhtmltopdf --page-size A4 file://$(pwd)/resume.html ../resume.pdf
 
       - name: Commit and push static files and index.html
         env:
