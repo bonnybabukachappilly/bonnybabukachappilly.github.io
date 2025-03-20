@@ -50,7 +50,7 @@ jobs:
           --margin-bottom 15mm \
           --margin-left 10mm \
           --margin-right 10mm \
-          resume.html ./data/resume.pdf
+          resume.html ../static/resume.pdf
 
       - name: Commit and push static files and index.html
         env:
@@ -58,7 +58,7 @@ jobs:
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
-          git add index.html resume.pdf
+          git add index.html
           if [ -d "static" ]; then git add static/; fi
           git commit -m "Update static site files [Automated]" || echo "No changes to commit"
           git push https://x-access-token:${GITHUB_TOKEN}@github.com/bonnybabukachappilly/bonnybabukachappilly.github.io.git master || echo "No changes to push"
