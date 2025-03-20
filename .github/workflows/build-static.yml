@@ -43,8 +43,8 @@ jobs:
       - name: Generate Resume PDF with wkhtmltopdf
         run: |
           cd my_portfolio
-          curl http://127.0.0.1:5000/resume -o resume.html  # Fetch the resume page
-          wkhtmltopdf --page-size A4 resume.html ../resume.pdf  # Convert HTML to PDF
+          curl http://127.0.0.1:5000/resume -o resume.html
+          wkhtmltopdf --page-size A4 --disable-smart-shrinking --no-stop-slow-scripts resume.html ../resume.pdf
 
       - name: Commit and push static files and index.html
         env:
