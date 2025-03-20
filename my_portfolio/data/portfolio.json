@@ -7,6 +7,7 @@
     "contact": {
         "email": "bonnybabukachappilly@gmail.com",
         "phone": "+91 8589973392",
+        "portfolio_url": "https://bonnybabukachappilly.github.io",
         "location": {
             "current": "Bangalore, Karnataka, India",
             "home": "Ernakulam, Kerala, India"
@@ -18,7 +19,7 @@
         {
             "label": "Gmail",
             "icon": "envelope-at",
-            "url": ""
+            "url": "mailto:bonnybabukachappilly@gmail.com"
         },
         {
             "label": "Linkedin",
@@ -126,5 +127,14 @@
                 "MG996R Servos"
             ]
         }
+    ],
+    "accomplishments": [
+        "Automated SmartDose assembly line, reducing cycle time by 75%.",
+        "Developed ROS 2-based AMR (Sime-World), improving navigation efficiency.",
+        "Optimized patient monitoring system (VitalCAM), reducing latency by 40%.",
+        "Designed robotic workflows using RoboDK, increasing operational efficiency.",
+        "Integrated real-time data communication via MQTT and Modbus, enhancing system reliability.",
+        "Implemented PLC and HMI systems for synchronized multi-cell automation.",
+        "Created an automated testing solution, improving software validation speed."
     ]
 }

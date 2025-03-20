@@ -1,6 +1,5 @@
 import json
 from flask import Flask, render_template
-import os
 from pathlib import Path
 
 app = Flask(__name__)
@@ -13,24 +12,23 @@ config_path: Path = Path().joinpath(
 )
 
 
-@app.route('/')
-def index() -> str:
+def refresh_config():
     with open(config_path, 'r') as _f:
         config = json.load(_f)
 
+    return config
+
+
+@app.route('/')
+def index() -> str:
+    config = refresh_config()
     return render_template("base.html", config=config)
 
 
-@app.route('/generate_static')
-def generate_static() -> str:
-    file_path = os.path.join(os.getcwd(), 'static', 'generated_page.html')
-
-    html_content = render_template('base.html', title="Static HTML Page")
-
-    with open(file_path, 'w') as file:
-        file.write(html_content)
-
-    return f'Successfully generated static HTML file at {file_path}'
+@app.route('/resume')
+def resume() -> str:
+    config = refresh_config()
+    return render_template("resume.html", config=config)
 
 
 if __name__ == '__main__':
