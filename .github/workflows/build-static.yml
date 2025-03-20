@@ -44,7 +44,13 @@ jobs:
         run: |
           cd my_portfolio
           curl http://127.0.0.1:5000/resume -o resume.html
-          xvfb-run wkhtmltopdf --page-size A4 --enable-local-file-access resume.html ../resume.pdf
+          xvfb-run wkhtmltopdf --page-size A4 \
+          --enable-local-file-access \
+          --margin-top 15mm \
+          --margin-bottom 15mm \
+          --margin-left 10mm \
+          --margin-right 10mm \
+          resume.html ./data/resume.pdf
 
       - name: Commit and push static files and index.html
         env:

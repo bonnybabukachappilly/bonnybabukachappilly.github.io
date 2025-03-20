@@ -31,9 +31,8 @@
                 </li>
             </ul>
 
-            <button class="btn download-cv" type="button">Download CV<i
-                    class="bi bi-cloud-arrow-down fs-5"></i></button>
-
+            <a href="{{ url_for('static', filename='resume.pdf') }}" download class="btn download-cv" type="button">Download CV<i
+                    class="bi bi-cloud-arrow-down fs-5"></i></a>
         </div>
     </div>
 </nav>

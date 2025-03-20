@@ -4,6 +4,7 @@
     "favicon": "assets/images/BB.png",
     "favicon_type": "png",
     "image_path": "/assets/images/profile_pic.png",
+    "resume":"/resume.pdf",
     "contact": {
         "email": "bonnybabukachappilly@gmail.com",
         "phone": "+91 8589973392",
