@@ -24,6 +24,11 @@ jobs:
           cd my_portfolio
           uv sync
 
+      - name: Install wkhtmltopdf
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wkhtmltopdf
+
       - name: Run Flask app and generate static index.html
         run: |
           cd my_portfolio
@@ -35,13 +40,19 @@ jobs:
           curl http://127.0.0.1:5000 -o ../index.html
           cp -r static ../
 
+      - name: Generate Resume PDF with wkhtmltopdf
+        run: |
+          cd my_portfolio
+          curl http://127.0.0.1:5000/resume -o resume.html  # Fetch the resume page
+          wkhtmltopdf --page-size A4 resume.html ../resume.pdf  # Convert HTML to PDF
+
       - name: Commit and push static files and index.html
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
-          git add index.html
+          git add index.html resume.pdf
           if [ -d "static" ]; then git add static/; fi
           git commit -m "Update static site files [Automated]" || echo "No changes to commit"
           git push https://x-access-token:${GITHUB_TOKEN}@github.com/bonnybabukachappilly/bonnybabukachappilly.github.io.git master || echo "No changes to push"
