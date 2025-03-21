@@ -62,7 +62,11 @@
             "highlights": [
                 "Designed and maintained electrical single-line diagrams (SLDs) and layouts using AutoCAD software.",
                 "Conducted site supervision ensuring design implementation and compliance with safety regulations.",
-                "Managed procurement activities and supervised daily operations for government projects."
+                "Managed procurement activities and supervised operations for government projects.",
+                "Performed load calculations and equipment selection to optimize electrical system performance.",
+                "Developed and reviewed technical documentation, including schematics, BOMs.",
+                "Troubleshot and resolved electrical issues during installation and commissioning phases.",
+                "Ensured regulatory compliance by adhering to national and international electrical standards."
             ]
         }
     ],
@@ -184,9 +188,12 @@
         {
             "name": "Soft Skills",
             "keywords": [
+                "Self-motivated",
+                "Problem-solving",
+                "Multitasking",
                 "Team Collaboration",
-                "Problem Solving",
-                "Adaptability ",
+                "Communicative",
+                "Adaptability",
                 "Critical Thinking"
             ]
         }
