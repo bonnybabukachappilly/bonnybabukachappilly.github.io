@@ -44,12 +44,10 @@ jobs:
         run: |
           cd my_portfolio
           curl http://127.0.0.1:5000/resume -o resume.html
-          xvfb-run wkhtmltopdf --page-size A4 \
+          xvfb-run wkhtmltopdf -s A4 \
+          -T 15mm -B 15mm -L 10mm -R 10mm\
           --enable-local-file-access \
-          --margin-top 15mm \
-          --margin-bottom 15mm \
-          --margin-left 10mm \
-          --margin-right 10mm \
+          --disable-smart-shrinking \
           resume.html ../static/resume.pdf
 
       - name: Commit and push static files and index.html

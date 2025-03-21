@@ -4,7 +4,7 @@
     "favicon": "assets/images/BB.png",
     "favicon_type": "png",
     "image_path": "/assets/images/profile_pic.png",
-    "resume":"/resume.pdf",
+    "resume": "/resume.pdf",
     "contact": {
         "email": "bonnybabukachappilly@gmail.com",
         "phone": "+91 8589973392",
@@ -41,10 +41,16 @@
             "end_date": "Present",
             "location": "Ernakulam, Kerala, India",
             "highlights": [
-                "Automated SmartDose assembly line for West Pharma using advanced robotics digital twins, and real-time monitoring.",
-                "Developed an AMR project (Sime-World) with ROS 2 and a Django backend for real-time navigation and visualization.",
-                "Contributed to the development of VitalCAM, reducing latency by 40% for real-time patient data streaming.",
-                "Built an automated testing solution for Isave, integrating an intuitive GUI and comprehensive reporting protocols."
+                "Programmed ABB Yumi, Gofa, and Omron TM5 robots for three assembly cells in SmartDose Flex Automation.",
+                "Developed modular PLC function blocks and integrated EtherNet/IP for seamless robot-cell communication.",
+                "Assisted in PLC-vision system communication using TCP sockets for real-time object detection and validation.",
+                "Optimized robotic motion, reducing cycle time and improving efficiency in automated assembly processes.",
+                "Leveraged Adapter & Factory design patterns for scalable and maintainable robotics software development.",
+                "Designed middleware bridging ROS 2 DDS and WebSockets for real-time robot monitoring in Sime-World.",
+                "Configured TurtleBot 3 and built a realistic simulation environment for navigation testing.",
+                "Implemented sensor fusion techniques to enhance localization accuracy and improve path planning.",
+                "Implemented real-time video streaming for patient monitoring in VitalCAM.",
+                "Developed test automation for ISave, a ventilator-sharing device, with automated test execution and reporting."
             ]
         },
         {
@@ -62,7 +68,7 @@
     ],
     "education": [
         {
-            "course": "Bachelor of Technology in Electrical and Electronics Engineering",
+            "course": "Bachelor of Technology [EEE]",
             "institution": "College of Engineering, Aranmula",
             "year": "2020",
             "university": "APJ Abdul Kalam Technological University"
@@ -81,11 +87,11 @@
             "duration": "January 2023 - Present",
             "description": "Automated the SmartDose assembly line using robotics, digital twin technologies, and real-time monitoring.",
             "tasks": [
-                "Simulated workflows with RoboDK, achieving a 75% cycle time reduction.",
-                "Programmed ABB Yumi, ABB Gofa, and Omron TM5 robots for dynamic error handling.",
-                "Designed HMI and PLC systems to synchronize 6 assembly cells for smooth operation.",
-                "Integrated sensors and actuators to minimize Failure Modes and Effects Analysis (FMEA) findings.",
-                "Streamlined data communication using MQTT, Modbus, and TCP sockets."
+                "Led robotics programming for ABB Yumi & Gofa, and Omron TM5, focusing on 3 out of 6 assembly cells, ensuring seamless robot motion and process execution.",
+                "Developed PLC function blocks for EtherNet/IP-based ABB integration, standardizing communication across all cells for improved modularity and scalability.",
+                "Implemented TCP socket communication for vision system integration, enhancing real-time object detection and quality control.",
+                "Optimized robotic workflows and debugging, identifying inefficiencies and suggesting mechanical design improvements to enhance system reliability.",
+                "Leveraged Adapter & Factory design patterns to create a scalable software blueprint, ensuring consistency and reusability across the robotics and PLC programming teams."
             ]
         },
         {
@@ -94,48 +100,104 @@
             "duration": "July 2022 - December 2022",
             "description": "Developed an Autonomous Mobile Robot (AMR) using TurtleBot 3 and ROS 2.",
             "tasks": [
-                "Built a real-time communication system with WebSockets for robot-to-frontend connectivity.",
-                "Developed middleware for ROS 2 message conversion and API interaction.",
-                "Integrated navigation stacks with sensor fusion for accurate obstacle avoidance."
+                "Designed a middleware to bridge ROS 2 DDS and WebSockets, enabling seamless frontend integration with ROS.",
+                "Configured TurtleBot 3 for real-world navigation and testing.",
+                "Assisted in creating a realistic simulation environment for TurtleBot to operate in.",
+                "Integrated sensor fusion techniques to improve localization and navigation accuracy.",
+                "Supported electronics integration within the simulated world, ensuring accurate sensor-actuator interactions."
+            ]
+        },
+        {
+            "name": "VitalCAM",
+            "client": "AI-Med",
+            "duration": "-",
+            "description": "Implemented real-time video streaming for patient monitoring, ensuring secure transmission and optimizing performance for seamless remote access.",
+            "tasks": [
+                "Designed a middleware to bridge ROS 2 DDS and WebSockets, enabling seamless frontend integration with ROS.",
+                "Configured TurtleBot 3 for real-world navigation and testing.",
+                "Assisted in creating a realistic simulation environment for TurtleBot to operate in.",
+                "Integrated sensor fusion techniques to improve localization and navigation accuracy.",
+                "Supported electronics integration within the simulated world, ensuring accurate sensor-actuator interactions."
+            ]
+        },
+        {
+            "name": "ISave Test Automation",
+            "client": "AI-Med",
+            "duration": "-",
+            "description": "Implemented test automation for ISave, a ventilator-sharing device, ensuring reliable performance and efficient multi-patient usage validation.",
+            "tasks": [
+                "Automated manual testing by processing pre-formatted Excel sheets as test case inputs.",
+                "Generated automated test reports in Excel, reducing manual effort and improving accuracy.",
+                "Integrated Appium with Android-based systems, enabling seamless communication for testing Isave and the test ventilator.",
+                "Developed UI using Kivy for test execution and monitoring.",
+                "Used Python for scripting and implemented background Shell scripts to connect Android devices via ADB."
             ]
         }
     ],
     "skills": [
         {
-            "name": "Robotics & Automation",
-            "level": "Expert",
+            "name": "Robotics System & Automation",
             "keywords": [
-                "ROS 2",
-                "Python",
-                "Control Systems",
-                "Automation"
+                "Robotic Manipulators",
+                "ABB Yumi & Gofa",
+                "TM5",
+                "HMI",
+                "PLC",
+                "Robotic Manipulators",
+                "Collaborative Robots"
             ]
         },
         {
             "name": "Simulation & Design",
-            "level": "Advanced",
             "keywords": [
+                "RViz",
+                "RobotStudio",
+                "RoboDK",
+                "MoveIt",
                 "Gazebo",
-                "SolidWorks"
+                "AutoCAD",
+                "Fusion 360"
+            ]
+        },
+        {
+            "name": "Programming & Development",
+            "keywords": [
+                "Python",
+                "ROS 2",
+                "ROS 1",
+                "PLC Programming",
+                "ABB RAPID Programming",
+                "TM Flow Programming",
+                "Sysmac Studio"
             ]
         },
         {
             "name": "Embedded Systems & Hardware",
-            "level": "Intermediate",
             "keywords": [
-                "Raspberry Pi 4",
-                "Raspberry Pi Pico 2W",
-                "MG996R Servos"
+                "Raspberry PI",
+                "Arduino",
+                "Nvidia Jetson",
+                "Motor Control",
+                "Sensor Integration"
+            ]
+        },
+        {
+            "name": "Soft Skills",
+            "keywords": [
+                "Team Collaboration",
+                "Problem Solving",
+                "Adaptability ",
+                "Critical Thinking"
             ]
         }
     ],
     "accomplishments": [
-        "Automated SmartDose assembly line, reducing cycle time by 75%.",
-        "Developed ROS 2-based AMR (Sime-World), improving navigation efficiency.",
-        "Optimized patient monitoring system (VitalCAM), reducing latency by 40%.",
-        "Designed robotic workflows using RoboDK, increasing operational efficiency.",
-        "Integrated real-time data communication via MQTT and Modbus, enhancing system reliability.",
-        "Implemented PLC and HMI systems for synchronized multi-cell automation.",
-        "Created an automated testing solution, improving software validation speed."
+        "Mentored junior engineers in ABB and PLC programming, accelerating onboarding.",
+        "Integrated MQTT-based IoT data publishing for predictive maintenance and real-time monitoring.",
+        "Developed a ROS-based semi-digital twin with RViz for real-time robot diagnostics.",
+        "Optimized robotic path planning, cutting cycle time from 2m 30s to under 1m.",
+        "Designed modular PLC function blocks for reusable, maintainable automation logic.",
+        "Enabled cell-wise testing in robots without PLC for independent validation.",
+        "Introduced dry-run capability to ensure process reliability before deployment."
     ]
 }
