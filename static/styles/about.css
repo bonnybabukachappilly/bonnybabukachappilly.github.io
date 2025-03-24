@@ -4,64 +4,65 @@
     max-width: 100vw;
     min-height: 100vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 80px 0;
 }
 
-/* Bio Card (Full Width) */
-.bio-card {
-    width: 100%;
+.education-card .card-body {
     background: var(--bg-color);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-/* Skills Container (Matches Bio Card Width) */
-.skills-container {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-/* Skill Card (Now Matches Bio Card Width) */
-.skill-card {
-    flex: 1;
-    min-width: 30%;
-    /* Maximum 3 per row */
-    background: var(--bg-color);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: left;
-}
-
-/* Ensure Equal Heights for Skill Cards */
-.skills-container .skill-card {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    height: 100%;
+    margin: 0;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 992px) {
-    .skills-container {
-        flex-direction: column;
-        gap: 10px;
+/* Match Heights */
+.equal-height {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Ensure All Cards Fill Available Space */
+.education-container,
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.education-card,
+.skill-card {
+    background: var(--bg-color);
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+    .education-card {
+        background: var(--bg-color);
+        border-radius: 10px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        flex-grow: 1;
+        /* Ensures all cards stretch equally */
+
+        display: flex;
+        align-items: center;
+        /* Vertical Center */
     }
 
-    .about-section .container{
-        margin-bottom: 80px;
-    }
+    flex-grow: 1;
+    /* Makes sure all cards stretch equally */
+}
 
-    .skill-card {
-        min-width: 100%;
-        /* Stack cards in a single column */
+/* Hover Effect */
+.skill-card:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .skills-section {
+        margin-top: 20px;
     }
 }
