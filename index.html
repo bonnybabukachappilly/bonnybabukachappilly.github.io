@@ -18,16 +18,18 @@
         href="/static/assets/images/BB.png">
 
     <!-- Custom stylesheet -->
-    <link rel="stylesheet" href="/static/styles/index.css">
-    <link rel="stylesheet" href="/static/styles/education.css">
-    <link rel="stylesheet" href="/static/styles/experience.css">
-    <link rel="stylesheet" href="/static/styles/project.css">
-    <link rel="stylesheet" href="/static/styles/contact.css">
+    <link rel="stylesheet" href="/static/styles/base.css">
     
+
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    
+<link rel="stylesheet" href="/static/styles/navbar.css">
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container">
         <!-- NAME -->
         <a class="navbar-brand fw-bold">BONNY BABU</a>
@@ -38,273 +40,464 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse justify-content-center" id="navbarPortfolio">
-            <ul class="navbar-nav mx-auto">
+        <!-- NAVIGATION LINKS -->
+        <div class="collapse navbar-collapse" id="navbarPortfolio">
+            <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link active" href="#home">HOME</a>
+                    <a class="nav-link mx-3" href="#home">HOME</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#about">ABOUT</a>
+                    <a class="nav-link mx-3" href="#about">ABOUT</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#experience">EXPERIENCE</a>
+                    <a class="nav-link mx-3" href="#experience">EXPERIENCE</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#project">PROJECT</a>
+                    <a class="nav-link mx-3" href="#projects">PROJECTS</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#education">EDUCATION</a>
+                    <a class="nav-link mx-3" href="#education">EDUCATION</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#contact">CONTACT</a>
+                    <a class="nav-link mx-3" href="#contact">CONTACT</a>
                 </li>
             </ul>
-
-            <a href="/static/resume.pdf" download class="btn download-cv" type="button">Download CV<i
-                    class="bi bi-cloud-arrow-down fs-5"></i></a>
         </div>
     </div>
 </nav>
-    <section id="home" class="home container-fluid d-flex align-items-center min-vh-100 min-vh-md-auto">
+
+
+    <script src="/static/js/navbar.js"></script>
+
+    
+<link rel="stylesheet" href="/static/styles/home.css">
+
+
+<section id="home" class="home-section d-flex align-items-center">
     <div class="container">
         <div class="row align-items-center">
-            <!-- Text Content -->
-            <div class="col-lg-6 text-lg-start text-center">
-                <h1 class="display-4 fw-bold text-dark">Robotics Engineer</h1>
+            <!-- Profile Picture (Left) -->
+            <div class="col-lg-6 text-center text-lg-start">
+                <img src="/static/assets/images/profile_pic.png" alt="Profile Picture"
+                    class="img-fluid profile-img">
+            </div>
+
+            <!-- Name, Title & Social Links (Right) -->
+            <div class="col-lg-6 text-center text-lg-start text-content">
+                <h1 class="fw-bold">Bonny Babu</h1>
+                <h3 class="text-muted">Robotics Engineer</h3>
                 <p class="lead text-muted">
                     I am a Robotics Engineer specializing in ROS 2, simulation, and motion planning, with expertise in industrial automation, control systems, and real-time data integration.
                 </p>
-                <div class="d-flex justify-content-lg-start justify-content-center gap-3 mt-4">
-                    
-                    <a class="btn btn-outline-dark rounded-circle" href="mailto:bonnybabukachappilly@gmail.com">
-                        <i class="bi bi-envelope-at"></i>
-                    </a>
-                    
-                    <a class="btn btn-outline-dark rounded-circle" href="https://www.linkedin.com/in/bonnybabukachappilly">
-                        <i class="bi bi-linkedin"></i>
-                    </a>
-                    
-                    <a class="btn btn-outline-dark rounded-circle" href="https://www.github.com/bonnybabukachappilly">
-                        <i class="bi bi-github"></i>
-                    </a>
-                    
-                </div>
-            </div>
 
-            <!-- Profile Image -->
-            <div class="col-lg-6 d-flex justify-content-lg-end justify-content-center mt-4 mt-lg-0">
-                <img src="/static/assets/images/profile_pic.png"
-                    class="img-fluid rounded-circle border border-3 border-dark" alt="Profile Image"
-                    style="max-width: 400px;">
+                <!-- Social Media Icons -->
+                <!-- Social Media Icons and Resume Button -->
+                <div
+                    class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start mt-3 gap-3">
+                    <!-- Social Icons -->
+                    <div class="d-flex gap-3">
+                        
+                        <a class="social-icon" href="mailto:bonnybabukachappilly@gmail.com"
+                            style="animation-delay: 0.4s;">
+                            <i class="bi bi-envelope-at"></i>
+                        </a>
+                        
+                        <a class="social-icon" href="https://www.linkedin.com/in/bonnybabukachappilly"
+                            style="animation-delay: 0.5s;">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                        
+                        <a class="social-icon" href="https://www.github.com/bonnybabukachappilly"
+                            style="animation-delay: 0.6000000000000001s;">
+                            <i class="bi bi-github"></i>
+                        </a>
+                        
+                    </div>
+
+                    <!-- Resume Download Button -->
+                    <a href="/static/resume.pdf" class="resume-btn" download
+                        style="animation-delay: 0.6000000000000001s;">
+                        <i class="bi bi-download"></i> Resume
+                    </a>
+                </div>
+
             </div>
         </div>
     </div>
 </section>
-    <section id="about" class="about container-fluid d-flex align-items-center min-vh-100 min-vh-md-auto">
+    
+<link rel="stylesheet" href="/static/styles/about.css">
+
+
+<section id="about" class="about-section">
     <div class="container">
-        <div class="row align-items-center">
-
-            <!-- <div class="col-lg-4"> -->
-                <h2 class="skills-heading fw-bold text-center mb-4">Skills</h2>
-                <div class="row justify-content-center mt-4">
-                    
-                    <div class="col-12">
-                        <h4 class="subheading">Robotics System &amp; Automation</h4>
-                        <div class="d-flex flex-wrap justify-content-center gap-2">
-                            
-                            <span class="skill-pill">Robotic Manipulators</span>
-                            
-                            <span class="skill-pill">ABB Yumi &amp; Gofa</span>
-                            
-                            <span class="skill-pill">TM5</span>
-                            
-                            <span class="skill-pill">HMI</span>
-                            
-                            <span class="skill-pill">PLC</span>
-                            
-                            <span class="skill-pill">Robotic Manipulators</span>
-                            
-                            <span class="skill-pill">Collaborative Robots</span>
-                            
-                        </div>
-                    </div>
-                    
-                    <div class="col-12">
-                        <h4 class="subheading">Simulation &amp; Design</h4>
-                        <div class="d-flex flex-wrap justify-content-center gap-2">
-                            
-                            <span class="skill-pill">RViz</span>
-                            
-                            <span class="skill-pill">RobotStudio</span>
-                            
-                            <span class="skill-pill">RoboDK</span>
-                            
-                            <span class="skill-pill">MoveIt</span>
-                            
-                            <span class="skill-pill">Gazebo</span>
-                            
-                            <span class="skill-pill">AutoCAD</span>
-                            
-                            <span class="skill-pill">Fusion 360</span>
-                            
-                        </div>
-                    </div>
-                    
-                    <div class="col-12">
-                        <h4 class="subheading">Programming &amp; Development</h4>
-                        <div class="d-flex flex-wrap justify-content-center gap-2">
-                            
-                            <span class="skill-pill">Python</span>
-                            
-                            <span class="skill-pill">ROS 2</span>
-                            
-                            <span class="skill-pill">ROS 1</span>
-                            
-                            <span class="skill-pill">PLC Programming</span>
-                            
-                            <span class="skill-pill">ABB RAPID Programming</span>
-                            
-                            <span class="skill-pill">TM Flow Programming</span>
-                            
-                            <span class="skill-pill">Sysmac Studio</span>
-                            
-                        </div>
-                    </div>
-                    
-                    <div class="col-12">
-                        <h4 class="subheading">Embedded Systems &amp; Hardware</h4>
-                        <div class="d-flex flex-wrap justify-content-center gap-2">
-                            
-                            <span class="skill-pill">Raspberry PI</span>
-                            
-                            <span class="skill-pill">Arduino</span>
-                            
-                            <span class="skill-pill">Nvidia Jetson</span>
-                            
-                            <span class="skill-pill">Motor Control</span>
-                            
-                            <span class="skill-pill">Sensor Integration</span>
-                            
-                        </div>
-                    </div>
-                    
-                    <div class="col-12">
-                        <h4 class="subheading">Soft Skills</h4>
-                        <div class="d-flex flex-wrap justify-content-center gap-2">
-                            
-                            <span class="skill-pill">Self-motivated</span>
-                            
-                            <span class="skill-pill">Problem-solving</span>
-                            
-                            <span class="skill-pill">Multitasking</span>
-                            
-                            <span class="skill-pill">Team Collaboration</span>
-                            
-                            <span class="skill-pill">Communicative</span>
-                            
-                            <span class="skill-pill">Adaptability</span>
-                            
-                            <span class="skill-pill">Critical Thinking</span>
-                            
-                        </div>
-                    </div>
-                    
-                </div>
-            <!-- </div> -->
-
-            <!-- <div class="col-lg-8 mb-4">
-                <div class="card about-card">
-                    <div class="card-body">
-                        <p class="lead text-muted">
-                            I am a Robotics Engineer with expertise in ROS 2, simulation, and motion planning. My experience includes industrial automation, control systems, and real-time data integration. Additionally, I have a strong background in PLC programming, embedded systems, and electrical engineering. Passionate about innovation and problem-solving, I thrive in cross-disciplinary teams and am always eager to learn and explore new technologies.
-                        </p>
-                    </div>
-                </div>
-            </div> -->
-
-        </div>
-    </div>
-</section>
-    <section id="experience" class="experience container-fluid d-flex align-items-center min-vh-100 min-vh-md-auto">
-    <div class="container">
-        <h2 class="text-center mb-4">Experience</h2>
-        <div class="experience-container row justify-content-center">
-            <!-- Experience Card 1 -->
-            
-            <div class="col-lg-10 col-md-10">
-                <div class="experience-card p-4">
-                    <h4 class="experience-title">Robotics Engineer <br> Simelabs - Digital, AI, Metaverse, Robotics, VLSI</h4>
-                    <p class="experience-duration">May 2021 - Present | Ernakulam, Kerala, India</p>
-                    <div class="experience-details">
-                        <ul>
-                            
-                            <li>Programmed ABB Yumi, Gofa, and Omron TM5 robots for three assembly cells in SmartDose Flex Automation.</li>
-                            
-                            <li>Developed modular PLC function blocks and integrated EtherNet/IP for seamless robot-cell communication.</li>
-                            
-                            <li>Assisted in PLC-vision system communication using TCP sockets for real-time object detection and validation.</li>
-                            
-                            <li>Optimized robotic motion, reducing cycle time and improving efficiency in automated assembly processes.</li>
-                            
-                            <li>Leveraged Adapter &amp; Factory design patterns for scalable and maintainable robotics software development.</li>
-                            
-                            <li>Designed middleware bridging ROS 2 DDS and WebSockets for real-time robot monitoring in Sime-World.</li>
-                            
-                            <li>Configured TurtleBot 3 and built a realistic simulation environment for navigation testing.</li>
-                            
-                            <li>Implemented sensor fusion techniques to enhance localization accuracy and improve path planning.</li>
-                            
-                            <li>Implemented real-time video streaming for patient monitoring in VitalCAM.</li>
-                            
-                            <li>Developed test automation for ISave, a ventilator-sharing device, with automated test execution and reporting.</li>
-                            
-                        </ul>
-                    </div>
-                </div>
+        <!-- Bio Card -->
+        <!-- <div class="card bio-card">
+            <div class="card-body">
+                <h2 class="card-title fw-bold">About Me</h2>
+                <p class="card-text">I am a Robotics Engineer with expertise in ROS 2, simulation, and motion planning. My experience includes industrial automation, control systems, and real-time data integration. Additionally, I have a strong background in PLC programming, embedded systems, and electrical engineering. Passionate about innovation and problem-solving, I thrive in cross-disciplinary teams and am always eager to learn and explore new technologies.</p>
             </div>
+        </div> -->
+
+        <!-- Skills Section -->
+        <div class="skills-container">
             
-            <div class="col-lg-10 col-md-10">
-                <div class="experience-card p-4">
-                    <h4 class="experience-title">MEP Design Engineer (Electrical) <br> Path BEE Engineers and Contractors</h4>
-                    <p class="experience-duration">January 2020 - April 2021 | Ernakulam, Kerala, India</p>
-                    <div class="experience-details">
-                        <ul>
-                            
-                            <li>Designed and maintained electrical single-line diagrams (SLDs) and layouts using AutoCAD software.</li>
-                            
-                            <li>Conducted site supervision ensuring design implementation and compliance with safety regulations.</li>
-                            
-                            <li>Managed procurement activities and supervised operations for government projects.</li>
-                            
-                            <li>Performed load calculations and equipment selection to optimize electrical system performance.</li>
-                            
-                            <li>Developed and reviewed technical documentation, including schematics, BOMs.</li>
-                            
-                            <li>Troubleshot and resolved electrical issues during installation and commissioning phases.</li>
-                            
-                            <li>Ensured regulatory compliance by adhering to national and international electrical standards.</li>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-    </div>
-</section>
-    <section id="project" class="projects container-fluid d-flex flex-column align-items-center py-5">
-    <h2 class="section-title">Projects</h2>
-    <div class="projects-container row">
-        <!-- Project 1 Card -->
-        
-        <div class="col-lg-6 col-md-12 mb-4">
-            <div class="project-card">
-                <h3 class="project-title">SmartDose Flex Automation</h3>
-                <p class="project-description">Client: West Pharma | January 2023 - Present</p>
-                <p class="project-description">Automated the SmartDose assembly line using robotics, digital twin technologies, and real-time monitoring.</p>
-                <div class="project-details">
-                    <h4>Details:</h4>
+            <div class="card skill-card">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">Robotics System &amp; Automation</h5>
                     <ul>
+                        
+                        <li><i class="bi bi-check-circle"></i> Robotic Manipulators</li>
+                        
+                        <li><i class="bi bi-check-circle"></i> ABB Yumi &amp; Gofa</li>
+                        
+                        <li><i class="bi bi-check-circle"></i> TM5</li>
+                        
+                        <li><i class="bi bi-check-circle"></i> HMI</li>
+                        
+                        <li><i class="bi bi-check-circle"></i> PLC</li>
+                        
+                        <li><i class="bi bi-check-circle"></i> Robotic Manipulators</li>
+                        
+                        <li><i class="bi bi-check-circle"></i> Collaborative Robots</li>
+                        
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card skill-card">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">Simulation &amp; Design</h5>
+                    <ul>
+                        
+                        <li><i class="bi bi-check-circle"></i> RViz</li>
+                        
+                        <li><i class="bi bi-check-circle"></i> RobotStudio</li>
+                        
+                        <li><i class="bi bi-check-circle"></i> RoboDK</li>
+                        
+                        <li><i class="bi bi-check-circle"></i> MoveIt</li>
+                        
+                        <li><i class="bi bi-check-circle"></i> Gazebo</li>
+                        
+                        <li><i class="bi bi-check-circle"></i> AutoCAD</li>
+                        
+                        <li><i class="bi bi-check-circle"></i> Fusion 360</li>
+                        
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card skill-card">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">Programming &amp; Development</h5>
+                    <ul>
+                        
+                        <li><i class="bi bi-check-circle"></i> Python</li>
+                        
+                        <li><i class="bi bi-check-circle"></i> ROS 2</li>
+                        
+                        <li><i class="bi bi-check-circle"></i> ROS 1</li>
+                        
+                        <li><i class="bi bi-check-circle"></i> PLC Programming</li>
+                        
+                        <li><i class="bi bi-check-circle"></i> ABB RAPID Programming</li>
+                        
+                        <li><i class="bi bi-check-circle"></i> TM Flow Programming</li>
+                        
+                        <li><i class="bi bi-check-circle"></i> Sysmac Studio</li>
+                        
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card skill-card">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">Embedded Systems &amp; Hardware</h5>
+                    <ul>
+                        
+                        <li><i class="bi bi-check-circle"></i> Raspberry PI</li>
+                        
+                        <li><i class="bi bi-check-circle"></i> Arduino</li>
+                        
+                        <li><i class="bi bi-check-circle"></i> Nvidia Jetson</li>
+                        
+                        <li><i class="bi bi-check-circle"></i> Motor Control</li>
+                        
+                        <li><i class="bi bi-check-circle"></i> Sensor Integration</li>
+                        
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card skill-card">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">Soft Skills</h5>
+                    <ul>
+                        
+                        <li><i class="bi bi-check-circle"></i> Self-motivated</li>
+                        
+                        <li><i class="bi bi-check-circle"></i> Problem-solving</li>
+                        
+                        <li><i class="bi bi-check-circle"></i> Multitasking</li>
+                        
+                        <li><i class="bi bi-check-circle"></i> Team Collaboration</li>
+                        
+                        <li><i class="bi bi-check-circle"></i> Communicative</li>
+                        
+                        <li><i class="bi bi-check-circle"></i> Adaptability</li>
+                        
+                        <li><i class="bi bi-check-circle"></i> Critical Thinking</li>
+                        
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+    
+<link rel="stylesheet" href="/static/styles/experience.css">
+
+
+<section id="experience" class="experience-section">
+    <div class="container">
+        <h2 class="section-title text-center">Experience</h2>
+
+        
+        <div class="row experience-entry">
+            <!-- Left Side (30%) -->
+            <div class="col-lg-4 job-info">
+                <h4 class="job-title">Robotics Engineer</h4>
+                <p class="company-name">Simelabs - Digital, AI, Metaverse, Robotics, VLSI</p>
+                <p class="duration">May 2021 - Present</p>
+            </div>
+
+            <!-- Right Side (70%) -->
+            <div class="col-lg-8">
+                <div class="experience-card">
+                    <ul>
+                        
+                        <li>Programmed ABB Yumi, Gofa, and Omron TM5 robots for three assembly cells in SmartDose Flex Automation.</li>
+                        
+                        <li>Developed modular PLC function blocks and integrated EtherNet/IP for seamless robot-cell communication.</li>
+                        
+                        <li>Assisted in PLC-vision system communication using TCP sockets for real-time object detection and validation.</li>
+                        
+                        <li>Optimized robotic motion, reducing cycle time and improving efficiency in automated assembly processes.</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row experience-entry">
+            <!-- Left Side (30%) -->
+            <div class="col-lg-4 job-info">
+                <h4 class="job-title">MEP Design Engineer (Electrical)</h4>
+                <p class="company-name">Path BEE Engineers and Contractors</p>
+                <p class="duration">January 2020 - April 2021</p>
+            </div>
+
+            <!-- Right Side (70%) -->
+            <div class="col-lg-8">
+                <div class="experience-card">
+                    <ul>
+                        
+                        <li>Designed and maintained electrical single-line diagrams (SLDs) and layouts using AutoCAD software.</li>
+                        
+                        <li>Conducted site supervision ensuring design implementation and compliance with safety regulations.</li>
+                        
+                        <li>Managed procurement activities and supervised operations for government projects.</li>
+                        
+                        <li>Performed load calculations and equipment selection to optimize electrical system performance.</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</section>
+
+
+<script src="/static/js/experience.js"></script>
+
+    
+<link rel="stylesheet" href="/static/styles/projects.css">
+
+
+<section id="projects" class="projects-section">
+    <div class="container">
+        <h2 class="section-title">Projects</h2>
+
+        <!-- Desktop View: Carousel -->
+        <div id="projectCarousel" class="carousel slide d-none d-md-block" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                
+                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="0"
+                    class="active" aria-label="Slide 1"></button>
+                
+                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="1"
+                    class="" aria-label="Slide 2"></button>
+                
+            </div>
+
+            <div class="carousel-inner">
+                
+                <div class="carousel-item active">
+                    <div class="row">
+                        
+                         <div class="col-lg-4">
+                            <div class="card project-card">
+                                <div class="card-body">
+                                    <h5 class="card-title">SmartDose Flex Automation</h5>
+                                    <p class="card-text"><strong>Client:</strong> West Pharma</p>
+                                    <p class="card-text"><strong>Duration:</strong> January 2023 - Present
+                                    </p>
+                                    <p class="card-text">Automated the SmartDose assembly line using robotics, digital twin technologies, and real-time monitoring.</p>
+                                    <h6 class="responsibilities-title">Key Responsibilities</h6>
+                                    <ul class="project-responsibilities">
+                                        
+                                        <li>Led robotics programming for ABB Yumi &amp; Gofa, and Omron TM5, focusing on 3 out of 6 assembly cells, ensuring seamless robot motion and process execution.</li>
+                                        
+                                        <li>Developed PLC function blocks for EtherNet/IP-based ABB integration, standardizing communication across all cells for improved modularity and scalability.</li>
+                                        
+                                        <li>Implemented TCP socket communication for vision system integration, enhancing real-time object detection and quality control.</li>
+                                        
+                                        <li>Optimized robotic workflows and debugging, identifying inefficiencies and suggesting mechanical design improvements to enhance system reliability.</li>
+                                        
+                                        <li>Leveraged Adapter &amp; Factory design patterns to create a scalable software blueprint, ensuring consistency and reusability across the robotics and PLC programming teams.</li>
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                    </div>
+                    
+                    
+                         <div class="col-lg-4">
+                            <div class="card project-card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Sime-World</h5>
+                                    <p class="card-text"><strong>Client:</strong> In-House Project</p>
+                                    <p class="card-text"><strong>Duration:</strong> July 2022 - December 2022
+                                    </p>
+                                    <p class="card-text">Developed an Autonomous Mobile Robot (AMR) using TurtleBot 3 and ROS 2.</p>
+                                    <h6 class="responsibilities-title">Key Responsibilities</h6>
+                                    <ul class="project-responsibilities">
+                                        
+                                        <li>Designed a middleware to bridge ROS 2 DDS and WebSockets, enabling seamless frontend integration with ROS.</li>
+                                        
+                                        <li>Configured TurtleBot 3 for real-world navigation and testing.</li>
+                                        
+                                        <li>Assisted in creating a realistic simulation environment for TurtleBot to operate in.</li>
+                                        
+                                        <li>Integrated sensor fusion techniques to improve localization and navigation accuracy.</li>
+                                        
+                                        <li>Supported electronics integration within the simulated world, ensuring accurate sensor-actuator interactions.</li>
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                    </div>
+                    
+                    
+                         <div class="col-lg-4">
+                            <div class="card project-card">
+                                <div class="card-body">
+                                    <h5 class="card-title">VitalCAM</h5>
+                                    <p class="card-text"><strong>Client:</strong> AI-Med</p>
+                                    <p class="card-text"><strong>Duration:</strong> -
+                                    </p>
+                                    <p class="card-text">Implemented real-time video streaming for patient monitoring, ensuring secure transmission and optimizing performance for seamless remote access.</p>
+                                    <h6 class="responsibilities-title">Key Responsibilities</h6>
+                                    <ul class="project-responsibilities">
+                                        
+                                        <li>Designed a middleware to bridge ROS 2 DDS and WebSockets, enabling seamless frontend integration with ROS.</li>
+                                        
+                                        <li>Configured TurtleBot 3 for real-world navigation and testing.</li>
+                                        
+                                        <li>Assisted in creating a realistic simulation environment for TurtleBot to operate in.</li>
+                                        
+                                        <li>Integrated sensor fusion techniques to improve localization and navigation accuracy.</li>
+                                        
+                                        <li>Supported electronics integration within the simulated world, ensuring accurate sensor-actuator interactions.</li>
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+            
+                <div class="carousel-item ">
+                    <div class="row">
+                        
+                         <div class="col-lg-4">
+                            <div class="card project-card">
+                                <div class="card-body">
+                                    <h5 class="card-title">ISave Test Automation</h5>
+                                    <p class="card-text"><strong>Client:</strong> AI-Med</p>
+                                    <p class="card-text"><strong>Duration:</strong> -
+                                    </p>
+                                    <p class="card-text">Implemented test automation for ISave, a ventilator-sharing device, ensuring reliable performance and efficient multi-patient usage validation.</p>
+                                    <h6 class="responsibilities-title">Key Responsibilities</h6>
+                                    <ul class="project-responsibilities">
+                                        
+                                        <li>Automated manual testing by processing pre-formatted Excel sheets as test case inputs.</li>
+                                        
+                                        <li>Generated automated test reports in Excel, reducing manual effort and improving accuracy.</li>
+                                        
+                                        <li>Integrated Appium with Android-based systems, enabling seamless communication for testing Isave and the test ventilator.</li>
+                                        
+                                        <li>Developed UI using Kivy for test execution and monitoring.</li>
+                                        
+                                        <li>Used Python for scripting and implemented background Shell scripts to connect Android devices via ADB.</li>
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                    </div>
+                    
+                    
+                        
+                    
+                        
+                    
+                </div>
+            </div>
+            
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <!-- Mobile View: Accordion -->
+    <div class="accordion d-md-none" id="projectAccordion">
+        
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading0">
+                <button class="accordion-button " type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapse0"
+                    aria-expanded="true" aria-controls="collapse0">
+                    SmartDose Flex Automation
+                </button>
+            </h2>
+            <div id="collapse0" class="accordion-collapse collapse show"
+                aria-labelledby="heading0" data-bs-parent="#projectAccordion">
+                <div class="accordion-body">
+                    <p><strong>Client:</strong> West Pharma</p>
+                    <p><strong>Duration:</strong> January 2023 - Present</p>
+                    <p>Automated the SmartDose assembly line using robotics, digital twin technologies, and real-time monitoring.</p>
+                    <h6 class="responsibilities-title">Key Responsibilities</h6>
+                    <ul class="project-responsibilities">
                         
                         <li>Led robotics programming for ABB Yumi &amp; Gofa, and Omron TM5, focusing on 3 out of 6 assembly cells, ensuring seamless robot motion and process execution.</li>
                         
@@ -321,14 +514,22 @@
             </div>
         </div>
         
-        <div class="col-lg-6 col-md-12 mb-4">
-            <div class="project-card">
-                <h3 class="project-title">Sime-World</h3>
-                <p class="project-description">Client: In-House Project | July 2022 - December 2022</p>
-                <p class="project-description">Developed an Autonomous Mobile Robot (AMR) using TurtleBot 3 and ROS 2.</p>
-                <div class="project-details">
-                    <h4>Details:</h4>
-                    <ul>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading1">
+                <button class="accordion-button collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapse1"
+                    aria-expanded="false" aria-controls="collapse1">
+                    Sime-World
+                </button>
+            </h2>
+            <div id="collapse1" class="accordion-collapse collapse "
+                aria-labelledby="heading1" data-bs-parent="#projectAccordion">
+                <div class="accordion-body">
+                    <p><strong>Client:</strong> In-House Project</p>
+                    <p><strong>Duration:</strong> July 2022 - December 2022</p>
+                    <p>Developed an Autonomous Mobile Robot (AMR) using TurtleBot 3 and ROS 2.</p>
+                    <h6 class="responsibilities-title">Key Responsibilities</h6>
+                    <ul class="project-responsibilities">
                         
                         <li>Designed a middleware to bridge ROS 2 DDS and WebSockets, enabling seamless frontend integration with ROS.</li>
                         
@@ -345,14 +546,22 @@
             </div>
         </div>
         
-        <div class="col-lg-6 col-md-12 mb-4">
-            <div class="project-card">
-                <h3 class="project-title">VitalCAM</h3>
-                <p class="project-description">Client: AI-Med | -</p>
-                <p class="project-description">Implemented real-time video streaming for patient monitoring, ensuring secure transmission and optimizing performance for seamless remote access.</p>
-                <div class="project-details">
-                    <h4>Details:</h4>
-                    <ul>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading2">
+                <button class="accordion-button collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapse2"
+                    aria-expanded="false" aria-controls="collapse2">
+                    VitalCAM
+                </button>
+            </h2>
+            <div id="collapse2" class="accordion-collapse collapse "
+                aria-labelledby="heading2" data-bs-parent="#projectAccordion">
+                <div class="accordion-body">
+                    <p><strong>Client:</strong> AI-Med</p>
+                    <p><strong>Duration:</strong> -</p>
+                    <p>Implemented real-time video streaming for patient monitoring, ensuring secure transmission and optimizing performance for seamless remote access.</p>
+                    <h6 class="responsibilities-title">Key Responsibilities</h6>
+                    <ul class="project-responsibilities">
                         
                         <li>Designed a middleware to bridge ROS 2 DDS and WebSockets, enabling seamless frontend integration with ROS.</li>
                         
@@ -369,14 +578,22 @@
             </div>
         </div>
         
-        <div class="col-lg-6 col-md-12 mb-4">
-            <div class="project-card">
-                <h3 class="project-title">ISave Test Automation</h3>
-                <p class="project-description">Client: AI-Med | -</p>
-                <p class="project-description">Implemented test automation for ISave, a ventilator-sharing device, ensuring reliable performance and efficient multi-patient usage validation.</p>
-                <div class="project-details">
-                    <h4>Details:</h4>
-                    <ul>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading3">
+                <button class="accordion-button collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapse3"
+                    aria-expanded="false" aria-controls="collapse3">
+                    ISave Test Automation
+                </button>
+            </h2>
+            <div id="collapse3" class="accordion-collapse collapse "
+                aria-labelledby="heading3" data-bs-parent="#projectAccordion">
+                <div class="accordion-body">
+                    <p><strong>Client:</strong> AI-Med</p>
+                    <p><strong>Duration:</strong> -</p>
+                    <p>Implemented test automation for ISave, a ventilator-sharing device, ensuring reliable performance and efficient multi-patient usage validation.</p>
+                    <h6 class="responsibilities-title">Key Responsibilities</h6>
+                    <ul class="project-responsibilities">
                         
                         <li>Automated manual testing by processing pre-formatted Excel sheets as test case inputs.</li>
                         
@@ -394,79 +611,13 @@
         </div>
         
     </div>
-</section>
-    <section id="education" class="education container-fluid d-flex align-items-center min-vh-100 min-vh-md-auto">
-    <div class="container">
-        <h2 class="section-title">Education</h2>
-        <div class="education-cards">
-            
-            <div class="education-card">
-                <h3 class="degree-title">Bachelor of Technology [EEE]</h3>
-                <p class="institution-name">College of Engineering, Aranmula - 2020</p>
-                <p class="education-university">APJ Abdul Kalam Technological University</p>
-            </div>
-            
-            <div class="education-card">
-                <h3 class="degree-title">Diploma of Education in MEP</h3>
-                <p class="institution-name">MTTC International LLC - 2019</p>
-                <p class="education-university">STED Council</p>
-            </div>
-            
-            
-        </div>
+
     </div>
 </section>
-    <section id="contact" class="contact-section container-fluid d-flex align-items-center min-vh-100">
-    <div class="container text-center">
-        <h2 class="section-title mb-4">Contact</h2>
-        <div class="row justify-content-center">
-            <div class="col-lg-6">
-                <div class="card contact-card p-4">
-                    <div class="card-body">
-                        <h5 class="card-title mb-3">Get in Touch</h5>
-                        <ul class="list-unstyled">
-                            <li class="mb-2">
-                                <i class="bi bi-envelope-fill me-2"></i>
-                                <strong>Email:</strong> bonnybabukachappilly@gmail.com
-                            </li>
-                            <li class="mb-2">
-                                <i class="bi bi-telephone-fill me-2"></i>
-                                <strong>Phone:</strong> +91 8589973392
-                            </li>
-                            
-                            
-                            
-                            
-                            <li class="mb-2">
-                                <i class="bi bi-linkedin me-2"></i>
-                                <strong>Linkedin:</strong>
-                                <a href="https://www.linkedin.com/in/bonnybabukachappilly" target="_blank">linkedin.com/in/bonnybabukachappilly</a>
-                            </li>
-                            
-                            
-                            
-                            <li class="mb-2">
-                                <i class="bi bi-linkedin me-2"></i>
-                                <strong>Github:</strong>
-                                <a href="https://www.github.com/bonnybabukachappilly" target="_blank">github.com/bonnybabukachappilly</a>
-                            </li>
-                            
-                            
-                            <li>
-                                <i class="bi bi-geo-alt-fill me-2"></i>
-                                <strong>Current:</strong> Bangalore, Karnataka, India
-                            </li>
-                            <li>
-                                <i class="bi bi-geo-alt-fill me-2"></i>
-                                <strong>Home:</strong> Ernakulam, Kerala, India
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+
+<!-- 
+<script src="/static/js/navbar.js"></script>
+ -->
 
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -474,7 +625,7 @@
         crossorigin="anonymous"></script>
 
     <!-- custom Javascript -->
-    <script src="/static/js/index.js"></script>
+    
 </body>
 
 </html>
