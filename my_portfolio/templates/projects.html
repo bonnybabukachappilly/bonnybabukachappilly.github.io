@@ -28,12 +28,23 @@
                                     <p class="card-text"><strong>Duration:</strong> {{ config.projects[j].duration }}
                                     </p>
                                     <p class="card-text">{{ config.projects[j].description }}</p>
-                                    <h6 class="responsibilities-title">Key Responsibilities</h6>
-                                    <ul class="project-responsibilities">
-                                        {% for point in config.projects[j].tasks %}
-                                        <li>{{ point }}</li>
-                                        {% endfor %}
-                                    </ul>
+
+                                    <!-- Responsibilities Section (Initially Collapsed) -->
+                                    <div class="collapse project-responsibilities" id="collapseProject">
+                                        <h6 class="responsibilities-title">Key Responsibilities</h6>
+                                        <ul>
+                                            {% for point in config.projects[j].tasks %}
+                                            <li>{{ point }}</li>
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+
+                                    <!-- Toggle Button -->
+                                    <button class="btn toggle-btn expand-button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseProject" aria-expanded="false"
+                                        aria-controls="collapseProject">
+                                        <i class="bi bi-chevron-down"></i>
+                                    </button>
                                 </div>
                             </div>
                     </div>
@@ -84,6 +95,6 @@
     </div>
 </section>
 
-<!-- {% block javascript %}
+{% block javascript %}
 <script src="{{url_for('static', filename='js/navbar.js')}}"></script>
-{% endblock javascript %} -->
+{% endblock javascript %}

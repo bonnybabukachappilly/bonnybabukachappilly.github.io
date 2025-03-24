@@ -78,7 +78,7 @@
             "university": "APJ Abdul Kalam Technological University"
         },
         {
-            "course": "Diploma of Education in MEP",
+            "course": "Diploma of Education [MEP]",
             "institution": "MTTC International LLC",
             "year": "2019",
             "university": "STED Council"
@@ -167,8 +167,7 @@
             "name": "Programming & Development",
             "keywords": [
                 "Python",
-                "ROS 2",
-                "ROS 1",
+                "ROS 1 & 2",
                 "PLC Programming",
                 "ABB RAPID Programming",
                 "TM Flow Programming",

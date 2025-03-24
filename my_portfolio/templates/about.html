@@ -4,28 +4,44 @@
 
 <section id="about" class="about-section">
     <div class="container">
-        <!-- Bio Card -->
-        <!-- <div class="card bio-card">
-            <div class="card-body">
-                <h2 class="card-title fw-bold">About Me</h2>
-                <p class="card-text">{{config.summary}}</p>
-            </div>
-        </div> -->
-
-        <!-- Skills Section -->
-        <div class="skills-container">
-            {% for section in config.skills %}
-            <div class="card skill-card">
-                <div class="card-body">
-                    <h5 class="card-title fw-bold">{{ section.name }}</h5>
-                    <ul>
-                        {% for skill in section.keywords %}
-                        <li><i class="bi bi-check-circle"></i> {{ skill }}</li>
-                        {% endfor %}
-                    </ul>
+        <div class="row">
+            <!-- Left: Education Section -->
+            <div class="col-md-6 d-flex flex-column">
+                <div class="row g-3 flex-grow-1">
+                    {% for edu in config.education %}
+                    <div class="col-12">
+                        <div class="card education-card p-3 equal-height">
+                            <div class="card-body">
+                                <h5 class="fw-bold">{{ edu.course }}</h5>
+                                <p class="mb-1"><strong>Institution:</strong> {{ edu.institution }}</p>
+                                <p class="mb-1"><strong>Graduation Year:</strong> {{ edu.year }}</p>
+                                <p class="mb-0"><strong>University:</strong> {{ edu.university }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
                 </div>
             </div>
-            {% endfor %}
+
+            <!-- Right: Skills Section (1 Card Per Row, Items Separated by '|') -->
+            <div class="col-md-6 d-flex flex-column skills-section">
+                <div class="row g-3 flex-grow-1">
+                    {% for section in config.skills %}
+                    <div class="col-12">
+                        <div class="card skill-card p-3 equal-height">
+                            <div class="card-body">
+                                <h5 class="fw-bold">{{ section.name }}</h5>
+                                <p class="text-muted">
+                                    {% for skill in section.keywords %}
+                                    {{ skill }}{% if not loop.last %} | {% endif %}
+                                    {% endfor %}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
         </div>
     </div>
 </section>
