@@ -1,0 +1,89 @@
+{% block stylesheet %}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/projects.css') }}">
+{% endblock stylesheet %}
+
+<section id="projects" class="projects-section">
+    <div class="container">
+        <h2 class="section-title">Projects</h2>
+
+        <!-- Desktop View: Carousel -->
+        <div id="projectCarousel" class="carousel slide d-none d-md-block" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                {% for i in range(0, config.projects|length, 3) %}
+                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="{{ i//3 }}"
+                    class="{% if i == 0 %}active{% endif %}" aria-label="Slide {{ i//3 + 1 }}"></button>
+                {% endfor %}
+            </div>
+
+            <div class="carousel-inner">
+                {% for i in range(0, config.projects|length, 3) %}
+                <div class="carousel-item {% if i == 0 %}active{% endif %}">
+                    <div class="row">
+                        {% for j in range(i, i+3) %}
+                        {% if j < config.projects|length %} <div class="col-lg-4">
+                            <div class="card project-card">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ config.projects[j].name }}</h5>
+                                    <p class="card-text"><strong>Client:</strong> {{ config.projects[j].client }}</p>
+                                    <p class="card-text"><strong>Duration:</strong> {{ config.projects[j].duration }}
+                                    </p>
+                                    <p class="card-text">{{ config.projects[j].description }}</p>
+                                    <h6 class="responsibilities-title">Key Responsibilities</h6>
+                                    <ul class="project-responsibilities">
+                                        {% for point in config.projects[j].tasks %}
+                                        <li>{{ point }}</li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </div>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <!-- Mobile View: Accordion -->
+    <div class="accordion d-md-none" id="projectAccordion">
+        {% for j in range(config.projects|length) %}
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading{{ j }}">
+                <button class="accordion-button {% if j != 0 %}collapsed{% endif %}" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapse{{ j }}"
+                    aria-expanded="{% if j == 0 %}true{% else %}false{% endif %}" aria-controls="collapse{{ j }}">
+                    {{ config.projects[j].name }}
+                </button>
+            </h2>
+            <div id="collapse{{ j }}" class="accordion-collapse collapse {% if j == 0 %}show{% endif %}"
+                aria-labelledby="heading{{ j }}" data-bs-parent="#projectAccordion">
+                <div class="accordion-body">
+                    <p><strong>Client:</strong> {{ config.projects[j].client }}</p>
+                    <p><strong>Duration:</strong> {{ config.projects[j].duration }}</p>
+                    <p>{{ config.projects[j].description }}</p>
+                    <h6 class="responsibilities-title">Key Responsibilities</h6>
+                    <ul class="project-responsibilities">
+                        {% for point in config.projects[j].tasks %}
+                        <li>{{ point }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    </div>
+</section>
+
+<!-- {% block javascript %}
+<script src="{{url_for('static', filename='js/navbar.js')}}"></script>
+{% endblock javascript %} -->

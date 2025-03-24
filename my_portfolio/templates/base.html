@@ -18,12 +18,9 @@
         href="{{url_for('static', filename=config.favicon)}}">
 
     <!-- Custom stylesheet -->
-    <link rel="stylesheet" href="{{url_for('static', filename='styles/index.css')}}">
-    <link rel="stylesheet" href="{{url_for('static', filename='styles/education.css')}}">
-    <link rel="stylesheet" href="{{url_for('static', filename='styles/experience.css')}}">
-    <link rel="stylesheet" href="{{url_for('static', filename='styles/project.css')}}">
-    <link rel="stylesheet" href="{{url_for('static', filename='styles/contact.css')}}">
-    
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/base.css')}}">
+    {% block stylesheet %}{% endblock stylesheet %}
+
 </head>
 
 <body>
@@ -31,9 +28,7 @@
     {% include 'home.html' %}
     {% include 'about.html' %}
     {% include 'experience.html' %}
-    {% include 'project.html' %}
-    {% include 'education.html' %}
-    {% include 'contact.html' %}
+    {% include 'projects.html' %}
 
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -41,7 +36,7 @@
         crossorigin="anonymous"></script>
 
     <!-- custom Javascript -->
-    <script src="{{url_for('static', filename='js/index.js')}}"></script>
+    {% block javascript %}{% endblock javascript %}
 </body>
 
 </html>

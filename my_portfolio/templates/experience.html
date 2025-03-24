@@ -1,23 +1,35 @@
-<section id="experience" class="experience container-fluid d-flex align-items-center min-vh-100 min-vh-md-auto">
+{% block stylesheet %}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/experience.css') }}">
+{% endblock stylesheet %}
+
+<section id="experience" class="experience-section">
     <div class="container">
-        <h2 class="text-center mb-4">Experience</h2>
-        <div class="experience-container row justify-content-center">
-            <!-- Experience Card 1 -->
-            {% for data in config.work_experience%}
-            <div class="col-lg-10 col-md-10">
-                <div class="experience-card p-4">
-                    <h4 class="experience-title">{{data.position}} <br> {{data.company}}</h4>
-                    <p class="experience-duration">{{data.start_date}} - {{data.end_date}} | {{data.location}}</p>
-                    <div class="experience-details">
-                        <ul>
-                            {% for items in data.highlights %}
-                            <li>{{items}}</li>
-                            {% endfor %}
-                        </ul>
-                    </div>
+        <h2 class="section-title text-center">Experience</h2>
+
+        {% for job in config.work_experience %}
+        <div class="row experience-entry">
+            <!-- Left Side (30%) -->
+            <div class="col-lg-4 job-info">
+                <h4 class="job-title">{{ job.position }}</h4>
+                <p class="company-name">{{ job.company }}</p>
+                <p class="duration">{{ job.start_date }} - {{ job.end_date }}</p>
+            </div>
+
+            <!-- Right Side (70%) -->
+            <div class="col-lg-8">
+                <div class="experience-card">
+                    <ul>
+                        {% for highlights in job.highlights[:4] %}
+                        <li>{{ highlights }}</li>
+                        {% endfor %}
+                    </ul>
                 </div>
             </div>
-            {% endfor %}
         </div>
+        {% endfor %}
     </div>
 </section>
+
+{% block javascript %}
+<script src="{{url_for('static', filename='js/experience.js')}}"></script>
+{% endblock javascript %}
