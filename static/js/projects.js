@@ -1,23 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
-    let carousel = document.querySelector("#carouselExampleIndicators");
-
-    function disableCarousel() {
-        let screenWidth = window.innerWidth;
-
-        if (screenWidth <= 767) {
-            // Remove 'carousel-item' class to stop sliding behavior
-            document.querySelectorAll(".carousel-item").forEach(item => {
-                item.classList.remove("carousel-item");
-            });
-
-            // Completely remove Bootstrap carousel instance
-            let bsCarousel = bootstrap.Carousel.getInstance(carousel);
-            if (bsCarousel) {
-                bsCarousel.dispose(); // Stop auto sliding
+    document.querySelectorAll(".toggle-btn").forEach(button => {
+        button.addEventListener("click", function () {
+            let icon = this.querySelector("i");
+            if (this.getAttribute("aria-expanded") === "true") {
+                icon.classList.replace("bi-chevron-down", "bi-chevron-up"); // Expand
+            } else {
+                icon.classList.replace("bi-chevron-up", "bi-chevron-down"); // Collapse
             }
-        }
-    }
-
-    disableCarousel(); // Run on page load
-    window.addEventListener("resize", disableCarousel); // Run on resize
+        });
+    });
 });
