@@ -1,0 +1,7 @@
+:root {
+    --font-family: "Arial"
+}
+
+body {
+    font-family: var(--font-family), Georgia, 'Times New Roman', Times, serif;
+}
