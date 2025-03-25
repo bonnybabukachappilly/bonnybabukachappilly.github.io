@@ -59,6 +59,10 @@
     animation: bounceIn 0.8s ease-out forwards;
 }
 
+.resume-btn i {
+    margin: 0 10px;
+}
+
 .social-icon:hover,
 .resume-btn:hover {
     background: var(--font-color-dark);

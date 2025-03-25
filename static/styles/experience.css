@@ -74,6 +74,11 @@
     font-size: 1.2rem;
 }
 
+.experience-card:hover{
+    transform: scale(1.02);
+    transition: transform 0.3s ease-in-out;
+}
+
 /* Responsive Adjustments */
 @media (max-width: 992px) {
     .experience-entry {
