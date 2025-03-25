@@ -51,7 +51,7 @@ jobs:
           --margin-left 10mm \
           --margin-right 10mm \
           --disable-smart-shrinking \
-          resume.html ../static/resume.pdf
+          resume.html ../static/bonny_babu.pdf
 
       - name: Commit and push static files and index.html
         env:
