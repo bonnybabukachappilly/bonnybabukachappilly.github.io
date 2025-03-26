@@ -198,12 +198,12 @@
         }
     ],
     "accomplishments": [
-        "Mentored junior engineers in ABB and PLC programming, accelerating onboarding.",
-        "Integrated MQTT-based IoT data publishing for predictive maintenance and real-time monitoring.",
-        "Developed a ROS-based semi-digital twin with RViz for real-time robot diagnostics.",
         "Optimized robotic path planning, cutting cycle time from 2m 30s to under 1m.",
         "Designed modular PLC function blocks for reusable, maintainable automation logic.",
         "Enabled cell-wise testing in robots without PLC for independent validation.",
+        "Developed a ROS-based semi-digital twin with RViz for real-time robot diagnostics.",
+        "Leveraged Industry 4.0 principles by integrating MQTT-based IoT data publishing for predictive maintenance and real-time monitoring.",
+        "Mentored junior engineers in ABB and PLC programming, accelerating onboarding.",
         "Introduced dry-run capability to ensure process reliability before deployment."
     ]
 }
