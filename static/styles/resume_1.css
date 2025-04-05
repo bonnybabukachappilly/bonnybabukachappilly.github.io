@@ -92,14 +92,16 @@ ul li {
     margin-bottom: 0.3rem;
 }
 
-/* Optional: Make left-right column spacing nicer */
-@media (min-width: 768px) {
-    .col-md-8 {
-        padding-right: 2rem;
+@media all {
+    .flex-md-row {
+        flex-direction: row !important;
     }
 
-    .col-md-4 {
-        border-left: 1px solid #e5e5e5;
-        padding-left: 2rem;
+    .col-8 {
+        width: 66.666667% !important;
+    }
+
+    .col-4 {
+        width: 33.333333% !important;
     }
 }
