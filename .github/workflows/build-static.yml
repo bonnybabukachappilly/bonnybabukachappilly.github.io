@@ -64,7 +64,7 @@ jobs:
           --margin-left 10mm \
           --margin-right 10mm \
           --disable-smart-shrinking \
-          resume_!.html ../static/resume.pdf
+          resume_1.html ../static/resume.pdf
 
       - name: Commit and push static files and index.html
         env:
