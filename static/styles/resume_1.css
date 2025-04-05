@@ -7,7 +7,7 @@ body {
     font-size: 0.95rem;
     color: #000;
     background-color: #fff;
-    max-width: 794px;
+    /* max-width: 794px; */
     margin: 0 auto;
     padding: 20px 30px;
 }
@@ -92,7 +92,7 @@ ul li {
     margin-bottom: 0.3rem;
 }
 
-@media all {
+/* @media all {
     .flex-md-row {
         flex-direction: row !important;
     }
@@ -104,4 +104,4 @@ ul li {
     .col-4 {
         width: 33.333333% !important;
     }
-}
+} */
