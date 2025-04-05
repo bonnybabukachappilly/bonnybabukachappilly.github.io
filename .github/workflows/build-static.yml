@@ -53,6 +53,19 @@ jobs:
           --disable-smart-shrinking \
           resume.html ../static/bonny_babu.pdf
 
+      - name: Generate 2nd Resume
+        run: |
+          cd my_portfolio
+          curl http://127.0.0.1:5000/resume/1 -o resume_1.html
+          xvfb-run wkhtmltopdf --page-size A4 \
+          --enable-local-file-access \
+          --margin-top 15mm \
+          --margin-bottom 15mm \
+          --margin-left 10mm \
+          --margin-right 10mm \
+          --disable-smart-shrinking \
+          resume_!.html ../static/resume.pdf
+
       - name: Commit and push static files and index.html
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

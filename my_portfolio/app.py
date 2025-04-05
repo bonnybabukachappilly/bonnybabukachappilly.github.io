@@ -31,5 +31,11 @@ def resume() -> str:
     return render_template("resume.html", config=config)
 
 
+@app.route('/resume/1')
+def resume1() -> str:
+    config = refresh_config()
+    return render_template("resume_1.html", config=config)
+
+
 if __name__ == '__main__':
     app.run(debug=True)

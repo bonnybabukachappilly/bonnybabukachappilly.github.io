@@ -35,7 +35,7 @@
     ],
     "work_experience": [
         {
-            "company": "Simelabs - Digital, AI, Metaverse, Robotics, VLSI",
+            "company": "Sinergia Media Labs",
             "position": "Robotics Engineer",
             "start_date": "May 2021",
             "end_date": "Present",
@@ -145,8 +145,7 @@
                 "Robotic Manipulators",
                 "ABB Yumi & Gofa",
                 "TM5",
-                "HMI",
-                "PLC",
+                "PLC & HMI",
                 "Robotic Manipulators",
                 "Collaborative Robots"
             ]
@@ -154,11 +153,10 @@
         {
             "name": "Simulation & Design",
             "keywords": [
-                "RViz",
+                "Rviz & Gazebo",
                 "RobotStudio",
                 "RoboDK",
                 "MoveIt",
-                "Gazebo",
                 "AutoCAD",
                 "Fusion 360"
             ]
