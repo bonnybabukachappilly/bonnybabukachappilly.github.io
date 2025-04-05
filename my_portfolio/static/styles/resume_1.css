@@ -7,7 +7,6 @@ body {
     font-size: 0.95rem;
     color: #000;
     background-color: #fff;
-    /* max-width: 794px; */
     margin: 0 auto;
     padding: 20px 30px;
 }
@@ -17,7 +16,7 @@ body {
     background-color: #fff;
     padding: 2.5rem;
     margin: 2rem auto;
-    max-width: 960px;
+    /* max-width: 960px; */
     /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
 }
 
