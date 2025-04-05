@@ -59,10 +59,6 @@ jobs:
           curl http://127.0.0.1:5000/resume/1 -o resume_1.html
           xvfb-run wkhtmltopdf --page-size A4 \
           --enable-local-file-access \
-          --margin-top 15mm \
-          --margin-bottom 15mm \
-          --margin-left 10mm \
-          --margin-right 10mm \
           --disable-smart-shrinking \
           resume_1.html ../static/resume.pdf
 
